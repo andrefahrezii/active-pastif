@@ -1,0 +1,31 @@
+# ./logstash/config/logstash.yml
+input {
+file {
+path => "/var/log/nginx/access.log"
+start_position => "beginning"
+sincedb_path => "/dev/null"
+}
+file {
+path => "/var/log/app/*.log"
+start_position => "beginning"
+sincedb_path => "/dev/null"
+}
+}
+
+filter {
+grok {
+match => { "message" => "%{COMBINEDAPACHELOG}" }
+}
+date {
+match => [ "timestamp", "dd/MMM/yyyy:HH:mm:ss Z" ]
+remove_field => [ "timestamp" ]
+}
+}
+
+output {
+elasticsearch {
+hosts => ["elasticsearch:9200"]
+index => "logstash-%{+YYYY.MM.dd}"
+}
+stdout { codec => rubydebug }
+}

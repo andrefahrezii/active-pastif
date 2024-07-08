@@ -1,0 +1,15 @@
+filebeat.inputs:
+  - type: log
+    enabled: true
+    paths:
+      - /var/log/app/*.log
+      - /var/lib/docker/containers/*/*.log
+    json.keys_under_root: true
+    json.add_error_key: true
+
+setup.template.name: "filebeat-%{[agent.version]}"
+setup.template.pattern: "filebeat-%{[agent.version]}-*"
+
+output.elasticsearch:
+  hosts: ["http://elasticsearch:9200"]
+  index: "filebeat-%{[agent.version]}-%{+yyyy.MM.dd}"

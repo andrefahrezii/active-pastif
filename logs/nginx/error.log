@@ -1,0 +1,8 @@
+2024/06/23 17:57:23 [emerg] 1#1: cannot load certificate "/etc/ssl/certs/your_cert.pem": BIO_new_file() failed (SSL: error:80000002:system library::No such file or directory:calling fopen(/etc/ssl/certs/your_cert.pem, r) error:10000080:BIO routines::no such file)
+2024/06/23 18:03:45 [emerg] 1#1: cannot load certificate "/etc/ssl/certs/your_cert.pem": BIO_new_file() failed (SSL: error:80000002:system library::No such file or directory:calling fopen(/etc/ssl/certs/your_cert.pem, r) error:10000080:BIO routines::no such file)
+2024/06/23 18:04:26 [emerg] 1#1: cannot load certificate "/etc/ssl/certs/your_cert.pem": BIO_new_file() failed (SSL: error:80000002:system library::No such file or directory:calling fopen(/etc/ssl/certs/your_cert.pem, r) error:10000080:BIO routines::no such file)
+2024/06/23 18:05:54 [emerg] 1#1: cannot load certificate "/etc/ssl/certs/your_cert.pem": BIO_new_file() failed (SSL: error:80000002:system library::No such file or directory:calling fopen(/etc/ssl/certs/your_cert.pem, r) error:10000080:BIO routines::no such file)
+2024/06/23 18:08:15 [emerg] 1#1: cannot load certificate "/etc/ssl/certs/your_cert.pem": BIO_new_file() failed (SSL: error:80000002:system library::No such file or directory:calling fopen(/etc/ssl/certs/your_cert.pem, r) error:10000080:BIO routines::no such file)
+2024/06/23 18:12:45 [emerg] 1#1: no "events" section in configuration
+2024/06/23 18:13:44 [emerg] 1#1: host not found in upstream "backend1:3000" in /etc/nginx/nginx.conf:9
+2024/06/23 18:25:34 [emerg] 1#1: host not found in upstream "backend1:3000" in /etc/nginx/nginx.conf:7
